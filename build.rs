@@ -3,6 +3,7 @@ extern crate gcc;
 use std::env;
 
 fn main() {
+    println!("cargo:rustc-link-lib=dylib=GL");
     let mut config = gcc::Config::new();
     config.include("nanovg/src");
     config.include("nanovg/example");
